@@ -2,7 +2,7 @@ const postsContainer = document.querySelector('#post-container');
 const loadIcon = document.querySelector('.loader');
 const filter = document.querySelector('#filter');
 
-let limit = 3;
+let limit= 4;
 let page = 1;
 
 // fetch data for posts from API
