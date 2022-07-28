@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  background-color: #628eb4;
-  color: white;
+  background-color: #292f33;
+  color: #e1e8ed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +22,7 @@ body {
 h1 {
   margin-bottom: 0;
   text-align: center;
+  color: #ffffff;
 }
 
 .filter-container {
@@ -37,23 +38,25 @@ h1 {
   padding: .5em;
   border: none;
   border-radius: 5px;
+  font-size: 18px;
 }
 
 .filter:focus {
   outline: none !important;
-  border: 2px solid #d46868;
+  border: 2px solid #ff0000;
 }
 
 .post {
   display: flex;
   position: relative;
-  background-color: #d46868;
+  background-color: #55acee;
   box-shadow: 0 2px 4px #ffffffb7;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 15px;
   margin: 2em 0;
   width: 80vh;
   max-width: 800px;
+  font-size: 18px;
 }
 
 .post .post-title {
@@ -61,8 +64,8 @@ h1 {
 }
 
 .post .post-body {
-  margin: 1em 0;
-  line-height: 1.4;
+  margin: .7em 0;
+  line-height: 1.2;
 }
 
 .post .post-info {

@@ -2,7 +2,7 @@ const postsContainer = document.querySelector('#post-container');
 const loadIcon = document.querySelector('.loader');
 const filter = document.querySelector('#filter');
 
-let limit= 4;
+let limit= 5;
 let page = 1;
 
 // fetch data for posts from API
@@ -34,4 +34,28 @@ async function showPosts() {
   });
 }
 
+// fetch more post data and show loading icon
+function nowLoading () {
+  loadIcon.classList.add('show')
+
+  setTimeout(() => {
+    loadIcon.classList.remove('show');
+
+    setTimeout(() => {
+      page++;
+      showPosts();
+    }, 400);
+
+  }, 800);
+}
+
 showPosts();
+
+// listens for a scroll, then calls the loading function to add more posts
+window.addEventListener('scroll', () => {
+  const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+
+  if(scrollTop + clientHeight >= scrollHeight - 5) {
+    nowLoading();
+  }
+})
