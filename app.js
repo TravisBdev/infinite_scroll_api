@@ -22,8 +22,7 @@ async function showPosts() {
     const indivPost = document.createElement('div');
     indivPost.classList.add('post');
 
-    let html = `
-    <div class="number">${post.id}</div>
+    const html = `
     <div class="post-info">
       <h2 class="post-title">${post.title}</h2>
       <p class="post-body">${post.body}</p>
