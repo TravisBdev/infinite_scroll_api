@@ -6,7 +6,7 @@ let limit= 4;
 let page = 1;
 
 // fetch data for posts from API
-async function getPosts () {
+async function getData () {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`);
 
   const data = await response.json();
@@ -16,7 +16,7 @@ async function getPosts () {
 
 // builds posts, then appends them to the page
 async function showPosts() {
-  const posts = await getPosts();
+  const posts = await getData();
 
   posts.forEach(post => {
     const indivPost = document.createElement('div');
